@@ -1,0 +1,14 @@
+ //for Complete cache remover
+            DefaultCacheManager().emptyCache();
+            //for image cache remover
+            imageCache!.clear();
+            imageCache!.clearLiveImages();
+
+ user.profilePhotoUrl == ""
+                                  ? Image.asset(
+                                      "assets/images/bottombar/userprofile.png",
+                                      color: Vx.black,
+                                    ).pOnly(
+                                      bottom: 4.0102522 * height,
+                                      top: 2.50768 * height)
+                                  : 
