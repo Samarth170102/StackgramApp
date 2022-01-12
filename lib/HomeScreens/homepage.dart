@@ -27,7 +27,10 @@ List<String> months = [
   "December"
 ];
 
-class HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage>
+    with AutomaticKeepAliveClientMixin<HomePage> {
+  @override
+  bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [PageChangeMutation]);
@@ -72,6 +75,7 @@ class HomePageState extends State<HomePage> {
         ListView.builder(
           key: PageStorageKey("homepage"),
           shrinkWrap: true,
+          cacheExtent: 6000,
           scrollDirection: Axis.vertical,
           physics:
               AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
