@@ -18,11 +18,10 @@ class HomePageSelector extends StatefulWidget {
 
 int indexOfPage = 0;
 
-class HomePageSelectorState extends State<HomePageSelector> {
+class HomePageSelectorState extends State<HomePageSelector>
+    with AutomaticKeepAliveClientMixin<HomePageSelector> {
   @override
-  void initState() {
-    super.initState();
-  }
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
