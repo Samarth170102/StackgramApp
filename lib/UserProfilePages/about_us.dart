@@ -71,7 +71,7 @@ class AboutUs extends StatelessWidget {
                         height: 0.70358 * height,
                       ),
                       Text(
-                        "Stackgram v1.0",
+                        "Stackgram v1.1",
                         style: TextStyle(
                             fontSize: 1.6082 * height,
                             color: user.darkMode! ? Vx.white : Vx.black),
