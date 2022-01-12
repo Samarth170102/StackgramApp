@@ -51,6 +51,7 @@ class _ConversationPageState extends State<ConversationPage> {
                       if (scrollController.hasClients) {
                         scrollController
                             .jumpTo(scrollController.position.maxScrollExtent);
+                        setState(() {});
                       }
                     },
                   );
