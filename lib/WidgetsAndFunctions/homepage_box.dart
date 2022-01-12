@@ -26,7 +26,10 @@ class HomePageBox extends StatefulWidget {
   _HomePageBoxState createState() => _HomePageBoxState();
 }
 
-class _HomePageBoxState extends State<HomePageBox> {
+class _HomePageBoxState extends State<HomePageBox>
+    with AutomaticKeepAliveClientMixin<HomePageBox> {
+  @override
+  bool get wantKeepAlive => true;
   int likes = 0;
   String caption = "";
   String userUid = "";
